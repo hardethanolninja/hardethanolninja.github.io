@@ -21,14 +21,15 @@ function Hero() {
     >
       <Flex direction="column" color="gray.200" h="85%">
         <Box>
-          <Text
+          <Heading
             fontFamily={theme.fonts.heading}
+            size="lg"
             ml="5vw"
             mt="20vh"
             color="green.500"
           >
             Hi, my name is
-          </Text>
+          </Heading>
           <Heading
             fontFamily={theme.fonts.heading}
             size="4xl"
@@ -39,12 +40,12 @@ function Hero() {
           </Heading>
           <Heading
             fontFamily={theme.fonts.heading}
+            size="xl"
             ml="5vw"
             mt="3vh"
             color="green.300"
           >
-            I write code and <br />
-            develop websites.
+            I write code and develop websites.
           </Heading>
         </Box>
         <Spacer />

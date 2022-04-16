@@ -6,6 +6,10 @@
   font-family: "JetBrains Mono", monospace;
 }
 
+.about_list {
+  cursor: pointer;
+}
+
 .about_icon {
   position: relative;
   top: -3px;

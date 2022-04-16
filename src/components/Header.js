@@ -17,6 +17,7 @@ import {
   ListIcon,
   Link,
   Icon,
+  Text,
 } from "@chakra-ui/react";
 import {
   FaHome,
@@ -29,6 +30,8 @@ import {
 
 import "../styles/Header.css";
 import theme from "../styles/theme.js";
+
+import Logo from "../images/icon/logo.js";
 
 function Header() {
   const { isOpen, onOpen, onClose } = useDisclosure();
@@ -71,7 +74,17 @@ function Header() {
         color="gray.400"
       >
         <Flex>
-          <p className="icon-typography">lienhard.dev</p>
+          <div
+            className="header_logo"
+            onClick={() => {
+              handleClick(heroAnchor);
+            }}
+          >
+            <Logo className="header_logo-icon" />
+            <Text className="header_logo-text" fontSize="lg">
+              Lienhard.dev
+            </Text>
+          </div>
           <Spacer />
           <Button
             onClick={onOpen}
