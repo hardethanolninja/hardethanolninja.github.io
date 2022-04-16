@@ -29,7 +29,6 @@ import {
 } from "react-icons/fa";
 
 import "../styles/Header.css";
-import theme from "../styles/theme.js";
 
 import Logo from "../images/icon/logo.js";
 

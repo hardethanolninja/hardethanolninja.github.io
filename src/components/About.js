@@ -21,8 +21,6 @@ import {
   DiWordpress,
 } from "react-icons/di";
 
-import { SiOxygen } from "react-icons/si";
-
 import theme from "../styles/theme";
 import "../styles/About.css";
 
