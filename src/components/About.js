@@ -25,6 +25,8 @@ import theme from "../styles/theme";
 import "../styles/About.css";
 
 function About() {
+  const years = new Date().getFullYear() - 2005;
+
   return (
     <Box
       pt="20vh"
@@ -36,15 +38,24 @@ function About() {
       <Heading fontFamily={theme.fonts.heading} ml="5vw" mb={5}>
         About Me
       </Heading>
-      <Text fontFamily={theme.fonts.body} ml="5vw" mb={2}>
+      <Text fontFamily={theme.fonts.body} ml="5vw" mb={5}>
         Hello! I'm a developer & problem solver based in Texas. I enjoy creating
         things and specialize in both front-end and back-end technologies.
       </Text>
-      <Text fontFamily={theme.fonts.body} ml="5vw" mr="3vw" mb={5}>
-        I spent 20 years in the Air Force as an intelligence analyst, where
-        using limited resources to develop answers for seemingly impossible
-        problems is commonplace.
-      </Text>
+      {years >= 20 ? (
+        <Text fontFamily={theme.fonts.body} ml="5vw" mr="3vw" mb={5}>
+          I spent 20 years in the Air Force as an intelligence analyst, where
+          using limited resources to develop answers for seemingly impossible
+          problems is commonplace.
+        </Text>
+      ) : (
+        <Text fontFamily={theme.fonts.body} ml="5vw" mr="3vw" mb={5}>
+          I've spent {years} years in the Air Force as an intelligence analyst,
+          where using limited resources to develop answers for seemingly
+          impossible problems is commonplace.
+        </Text>
+      )}
+
       <Text fontFamily={theme.fonts.body} ml="5vw" mr="3vw" mb={5}>
         Years ago, I was tasked with maintaining a SharePoint site for my unit.
         After weeks of struggling, I knew there had to be a better way. I
@@ -65,8 +76,8 @@ function About() {
                 color="gray.900"
                 label="I mean...it's HTML"
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 HTML
               </Tooltip>
@@ -79,8 +90,8 @@ function About() {
                 color="gray.900"
                 label="Bootstrap, & Tailwind"
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 CSS
               </Tooltip>
@@ -93,8 +104,8 @@ function About() {
                 color="gray.900"
                 label="JQuery"
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 JavaScript
               </Tooltip>
@@ -107,8 +118,8 @@ function About() {
                 color="gray.900"
                 label="Next.js, React Router, Chakra UI"
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 React
               </Tooltip>
@@ -121,8 +132,8 @@ function About() {
                 color="gray.900"
                 label="GitHub, GitHub Desktop"
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 Git
               </Tooltip>
@@ -139,8 +150,8 @@ function About() {
                 color="gray.900"
                 label="Express, Axios, Morgan, Nodemon"
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 Node.js
               </Tooltip>
@@ -153,8 +164,8 @@ function About() {
                 color="gray.900"
                 label="MongoDB Compass, Atlas, Mongoose"
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 MongoDB
               </Tooltip>
@@ -167,8 +178,8 @@ function About() {
                 color="gray.900"
                 label="Enough to survive..."
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 PHP
               </Tooltip>
@@ -181,8 +192,8 @@ function About() {
                 color="gray.900"
                 label="Oxygen Builder, ACF, CPT"
                 placement="right"
-                openDelay={200}
-                closeDelay={200}
+                openDelay={100}
+                closeDelay={100}
               >
                 WordPress
               </Tooltip>

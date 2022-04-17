@@ -26,7 +26,7 @@ function Footer() {
         <Flex flexDirection="column" alignItems="center">
           <Link
             mt={3}
-            fontSize={12}
+            fontSize={14}
             className="footer_email"
             mb={3}
             color="green.500"

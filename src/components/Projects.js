@@ -21,7 +21,11 @@ import "../styles/Projects.css";
 import theme from "../styles/theme";
 
 function Projects() {
-  const { isOpen, onOpen, onClose } = useDisclosure();
+  const {
+    isOpen: instaIsOpen,
+    onOpen: instaOnOpen,
+    onClose: instaOnClose,
+  } = useDisclosure();
   return (
     <>
       <Box
@@ -47,7 +51,7 @@ function Projects() {
             bgImage={insta}
             w="100%"
             h="200px"
-            onClick={onOpen}
+            onClick={instaOnOpen}
           >
             <Text
               w="90%"
@@ -65,8 +69,8 @@ function Projects() {
         </SimpleGrid>
       </Box>
       <Modal
-        isOpen={isOpen}
-        onClose={onClose}
+        isOpen={instaIsOpen}
+        onClose={instaOnClose}
         isCentered
         motionPreset="slideInBottom"
         size="3xl"
@@ -76,19 +80,19 @@ function Projects() {
           <ModalHeader>Instagram Clone</ModalHeader>
           <ModalCloseButton />
           <ModalBody>
-            <Box display="flex">
+            <Flex direction={{ base: "column", md: "row" }}>
               <Box
                 bgImage={insta}
-                minW="400px"
+                minW={["200px", "400px"]}
                 h="400px"
                 bgPosition="50% 0%"
                 bgSize="cover"
                 borderWidth="2px"
-                borderColor="gray.600 60%"
+                borderColor="gray.300"
                 borderRadius="4"
               />
               <Flex ml="10px" direction="column">
-                <Text mt="30px">
+                <Text mt="30px" mb="10px">
                   This project utilizes Firebase to authenticate users, and
                   provides data handling for user comments, following users, and
                   "liking" photos. It was created with React and uses Tailwind
@@ -98,14 +102,31 @@ function Projects() {
                 <Link
                   textAlign="center"
                   mb="10px"
+                  fontSize="1em"
+                  href="https://github.com/hardethanolninja/instagram-clone"
+                >
+                  GitHub Repo for this project
+                </Link>
+                <Link
+                  textAlign="center"
+                  mb="10px"
+                  fontSize="0.7em"
+                  color="gray.500"
+                  href="https://youtu.be/mDgEqoQUBgk"
+                >
+                  Inspired by this tutorial
+                </Link>
+                <Link
+                  textAlign="center"
+                  mb="10px"
                   fontSize="1.2em"
                   color="green.600"
-                  href="https://www.lienhard.dev/insta-clone"
+                  href="https://lienhard.dev/insta-clone"
                 >
                   Check out the Instagram Clone
                 </Link>
               </Flex>
-            </Box>
+            </Flex>
           </ModalBody>
         </ModalContent>
       </Modal>
