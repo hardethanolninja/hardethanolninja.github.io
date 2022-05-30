@@ -121,7 +121,7 @@ function Projects() {
                   mb="10px"
                   fontSize="1.2em"
                   color="green.600"
-                  href="https://lienhard.dev/insta-clone"
+                  href="/insta-clone"
                 >
                   Check out the Instagram Clone
                 </Link>
