@@ -42,7 +42,7 @@ function About() {
         Hello! I'm a developer & problem solver based in Texas. I enjoy creating
         things and specialize in both front-end and back-end technologies.
       </Text>
-      {years >= 20 ? (
+      {/* {years >= 20 ? (
         <Text fontFamily={theme.fonts.body} ml="5vw" mr="3vw" mb={5}>
           I spent 20 years in the Air Force as an intelligence analyst, where
           using limited resources to develop answers for seemingly impossible
@@ -54,7 +54,7 @@ function About() {
           where using limited resources to develop answers for seemingly
           impossible problems is commonplace.
         </Text>
-      )}
+      )} */}
 
       <Text fontFamily={theme.fonts.body} ml="5vw" mr="3vw" mb={5}>
         Years ago, I was tasked with maintaining a SharePoint site for my unit.

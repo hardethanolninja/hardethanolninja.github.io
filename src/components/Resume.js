@@ -38,7 +38,7 @@ function Resume() {
             <Heading fontFamily={theme.fonts.heading} size="md" mb={2}>
               U.S. Air Force
             </Heading>
-            <Text color="green.500">Master Sergeant</Text>
+            <Text color="green.500">Analyst</Text>
             <Text color={theme.colors.darkText} mb={2}>
               July 2005 - Present
             </Text>

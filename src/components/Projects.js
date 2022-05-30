@@ -16,6 +16,7 @@ import {
 } from "@chakra-ui/react";
 
 import insta from "../images/insta.webp";
+import landscape from "../images/landscape.webp";
 
 import "../styles/Projects.css";
 import theme from "../styles/theme";
@@ -26,6 +27,13 @@ function Projects() {
     onOpen: instaOnOpen,
     onClose: instaOnClose,
   } = useDisclosure();
+
+  const {
+    isOpen: landscapeIsOpen,
+    onOpen: landscapeOnOpen,
+    onClose: landscapeOnClose,
+  } = useDisclosure();
+
   return (
     <>
       <Box
@@ -64,6 +72,26 @@ function Projects() {
               color="green.500"
             >
               React, Tailwind, Firebase
+            </Text>
+          </Box>
+          <Box
+            className="projects_box"
+            bgImage={landscape}
+            w="100%"
+            h="200px"
+            onClick={landscapeOnOpen}
+          >
+            <Text
+              w="90%"
+              fontSize="xs"
+              className="text"
+              ml="4px"
+              mt="160px"
+              pl="8px"
+              bgColor="gray.800"
+              color="green.500"
+            >
+              Vanilla HTML, CSS, and JS with Bootstrap5
             </Text>
           </Box>
         </SimpleGrid>
@@ -124,6 +152,59 @@ function Projects() {
                   href="/insta-clone"
                 >
                   Check out the Instagram Clone
+                </Link>
+              </Flex>
+            </Flex>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+      <Modal
+        isOpen={landscapeIsOpen}
+        onClose={landscapeOnClose}
+        isCentered
+        motionPreset="slideInBottom"
+        size="3xl"
+      >
+        <ModalOverlay backdropFilter="blur(5px)" />
+        <ModalContent>
+          <ModalHeader>Lawn Care Website</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Flex direction={{ base: "column", md: "row" }}>
+              <Box
+                bgImage={landscape}
+                minW={["200px", "400px"]}
+                h="400px"
+                bgPosition="50% 0%"
+                bgSize="cover"
+                borderWidth="2px"
+                borderColor="gray.300"
+                borderRadius="4"
+              />
+              <Flex ml="10px" direction="column">
+                <Text mt="30px" mb="10px">
+                  This was a vanilla HTML, CSS, and JS website created with
+                  Bootstrap5. I used this website to learn how to create a
+                  website using Bootstrap. {<br />}It is a fully responsive,
+                  mobile-first main page demo.
+                </Text>
+                <Spacer />
+                <Link
+                  textAlign="center"
+                  mb="10px"
+                  fontSize="1em"
+                  href="https://github.com/hardethanolninja/lawn-service"
+                >
+                  GitHub Repo for this project
+                </Link>
+                <Link
+                  textAlign="center"
+                  mb="10px"
+                  fontSize="1.2em"
+                  color="green.600"
+                  href="/lawn-service"
+                >
+                  Check out the Site
                 </Link>
               </Flex>
             </Flex>
