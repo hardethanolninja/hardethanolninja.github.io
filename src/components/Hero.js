@@ -14,7 +14,7 @@ function Hero() {
   return (
     <Box
       className="hero_main"
-      w="100vw"
+      // w="100vw"
       h="100vh"
       bg={theme.colors.background}
       fontFamily={theme.fonts.heading}

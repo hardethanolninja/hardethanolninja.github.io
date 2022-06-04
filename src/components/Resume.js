@@ -26,7 +26,7 @@ function Resume() {
         Work Experience
       </Heading>
       <Center>
-        <Wrap ml={7} mr={3}>
+        <Wrap mx="10vw">
           <Box
             pb={3}
             minWidth="350px"
@@ -106,7 +106,7 @@ function Resume() {
         Education
       </Heading>
       <Center>
-        <Wrap ml={7} mr={3}>
+        <Wrap mx="10vw">
           <Box pb={3} minWidth="350px">
             <Heading fontFamily={theme.fonts.heading} size="md" mb={2}>
               Community College of <br /> The Air Force

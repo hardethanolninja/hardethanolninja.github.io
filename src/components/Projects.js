@@ -17,6 +17,7 @@ import {
 
 import insta from "../images/insta.webp";
 import landscape from "../images/landscape.webp";
+import dr_site from "../images/dr-site.webp";
 
 import "../styles/Projects.css";
 import theme from "../styles/theme";
@@ -32,6 +33,12 @@ function Projects() {
     isOpen: landscapeIsOpen,
     onOpen: landscapeOnOpen,
     onClose: landscapeOnClose,
+  } = useDisclosure();
+
+  const {
+    isOpen: doctorIsOpen,
+    onOpen: doctorOnOpen,
+    onClose: doctorOnClose,
   } = useDisclosure();
 
   return (
@@ -92,6 +99,26 @@ function Projects() {
               color="green.500"
             >
               Vanilla HTML, CSS, and JS with Bootstrap5
+            </Text>
+          </Box>
+          <Box
+            className="projects_box"
+            bgImage={dr_site}
+            w="100%"
+            h="200px"
+            onClick={doctorOnOpen}
+          >
+            <Text
+              w="90%"
+              fontSize="xs"
+              className="text"
+              ml="4px"
+              mt="160px"
+              pl="8px"
+              bgColor="gray.800"
+              color="green.500"
+            >
+              Next.js, MaterialUI, Heroku
             </Text>
           </Box>
         </SimpleGrid>
@@ -185,8 +212,14 @@ function Projects() {
                 <Text mt="30px" mb="10px">
                   This was a vanilla HTML, CSS, and JS website created with
                   Bootstrap5. I used this website to learn how to create a
-                  website using Bootstrap. {<br />}It is a fully responsive,
-                  mobile-first main page demo.
+                  website using Bootstrap.
+                </Text>
+                <Text mb="10px">
+                  It is a fully responsive, mobile-first main page demo.
+                </Text>
+                <Text>
+                  This website is only a landing page display, no links are
+                  active.
                 </Text>
                 <Spacer />
                 <Link
@@ -203,6 +236,62 @@ function Projects() {
                   fontSize="1.2em"
                   color="green.600"
                   href="/lawn-service"
+                >
+                  Check out the Site
+                </Link>
+              </Flex>
+            </Flex>
+          </ModalBody>
+        </ModalContent>
+      </Modal>
+      <Modal
+        isOpen={doctorIsOpen}
+        onClose={doctorOnClose}
+        isCentered
+        motionPreset="slideInBottom"
+        size="3xl"
+      >
+        <ModalOverlay backdropFilter="blur(5px)" />
+        <ModalContent>
+          <ModalHeader>Doctor's Office Website</ModalHeader>
+          <ModalCloseButton />
+          <ModalBody>
+            <Flex direction={{ base: "column", md: "row" }}>
+              <Box
+                bgImage={dr_site}
+                minW={["200px", "400px"]}
+                h="400px"
+                bgPosition="50% 0%"
+                bgSize="cover"
+                borderWidth="2px"
+                borderColor="gray.300"
+                borderRadius="4"
+              />
+              <Flex ml="10px" direction="column">
+                <Text mt="30px" mb="10px">
+                  This was a Next.JS practice project created with MaterialUI.
+                  Hosting is provided on a free Heroku shard, so initial load
+                  time for images can be slow.
+                </Text>
+                <Text>
+                  This website is only a landing page display, no links are
+                  active.
+                </Text>
+                <Spacer />
+                <Link
+                  textAlign="center"
+                  mb="10px"
+                  fontSize="1em"
+                  href="https://github.com/hardethanolninja/dr-site"
+                >
+                  GitHub Repo for this project
+                </Link>
+                <Link
+                  textAlign="center"
+                  mb="10px"
+                  fontSize="1.2em"
+                  color="green.600"
+                  href="https://doctor-a-site.herokuapp.com/"
                 >
                   Check out the Site
                 </Link>

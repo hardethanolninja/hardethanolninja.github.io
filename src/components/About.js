@@ -35,10 +35,10 @@ function About() {
       bg={theme.colors.background}
       color={theme.colors.text}
     >
-      <Heading fontFamily={theme.fonts.heading} ml="5vw" mb={5}>
+      <Heading fontFamily={theme.fonts.heading} mx="10vw" mb={5}>
         About Me
       </Heading>
-      <Text fontFamily={theme.fonts.body} ml="5vw" mb={5}>
+      <Text fontFamily={theme.fonts.body} mx="10vw" mb={5}>
         Hello! I'm a developer & problem solver based in Texas. I enjoy creating
         things and specialize in both front-end and back-end technologies.
       </Text>
@@ -56,16 +56,16 @@ function About() {
         </Text>
       )} */}
 
-      <Text fontFamily={theme.fonts.body} ml="5vw" mr="3vw" mb={5}>
+      <Text fontFamily={theme.fonts.body} mx="10vw" mb={5}>
         Years ago, I was tasked with maintaining a SharePoint site for my unit.
         After weeks of struggling, I knew there had to be a better way. I
         started teaching myself HTML, CSS, & JavaScript, and I've been
         passionate about development ever since!
       </Text>
-      <Heading fontFamily={theme.fonts.heading} ml="5vw" mb={5}>
+      <Heading fontFamily={theme.fonts.heading} mx="10vw" mb={5}>
         Tech I Know
       </Heading>
-      <Flex ml="5vw" className="about_list">
+      <Flex ml="10vw" className="about_list">
         <Box mr="2vw">
           <List>
             <ListItem>
